@@ -17,6 +17,7 @@ page_translation
 [id, page_id, lang, title]
 
 ## restful api
+lang=zh|en (default=en)
 
 /api/<lang>/pages/
 /api/<lang>/page/<slug>

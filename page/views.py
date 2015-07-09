@@ -18,7 +18,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 class PageView(APIView):
-    def get(self, request, format=None):
+    def get(self, request, lang, format=None):
+        print lang
         pages = PageTranslation.objects.get(language='en')
         serializer = PageTranslationSerializer(pages, many=True)
         return Response(serializer.data)
